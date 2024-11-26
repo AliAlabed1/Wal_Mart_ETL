@@ -27,7 +27,7 @@ def execute():
 
     query_runner = QueryRunner(config_file=f'{PROJECT_ROOT}/config.yaml')
 
-    # Example query to fetch all data from fact_table
+
     query = """
         DROP TABLE IF EXISTS tbl_analytics;
         CREATE TABLE tbl_analytics AS

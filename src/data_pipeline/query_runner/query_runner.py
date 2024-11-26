@@ -2,9 +2,9 @@ import os
 import pandas as pd
 import sys
 
-# Add the directory containing the `src` folder to the Python path
+
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../"))  # Adjust to reach `src`
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../"))  
 sys.path.append(PROJECT_ROOT)
 
 from utils.logging_utils import app_logger
@@ -41,7 +41,7 @@ class QueryRunner:
                 results = cursor.fetchall()
                 return results
             else:
-                conn.commit()  # For non-SELECT queries (e.g., INSERT/UPDATE/DELETE)
+                conn.commit()  
                 app_logger.info("Query executed successfully!")
         except Exception as e:
             app_logger.info(f"Error executing query: {e}")
