@@ -1,0 +1,6 @@
+database:
+  host: "localhost"
+  port: 5050
+  user: "ALI"
+  password: "12345"
+  database: "ETL_data_base"
