@@ -98,3 +98,10 @@ HINT:  Perhaps you meant to reference the column "f.temperature".
 2024-11-25 19:07:06,116 - app_logger - INFO - Data loaded successfully!
 2024-11-25 19:07:06,119 - app_logger - INFO - config.yaml loaded successfully for query runner
 2024-11-25 19:07:06,400 - app_logger - INFO - Query executed successfully!
+2024-11-26 20:05:39,611 - app_logger - ERROR - The file does not exist: C:\Users\USER\Desktop\Qufzah\task 4\ETL\src/Data/Walmart.csv
+2024-11-26 20:06:37,716 - app_logger - INFO - df loaded successfully from ../../Data/Walmart.csv
+2024-11-26 20:06:37,766 - app_logger - INFO - DF is transformed successfully.
+2024-11-26 20:06:37,847 - app_logger - INFO - Load config.yml successfuly
+2024-11-26 20:06:43,243 - app_logger - INFO - Data loaded successfully!
+2024-11-26 20:06:43,246 - app_logger - INFO - config.yaml loaded successfully for query runner
+2024-11-26 20:06:43,582 - app_logger - INFO - Query executed successfully!

@@ -17,7 +17,7 @@ def execute():
     GET method to render the HTML form.
     """
     loader = LoadCSVFile()
-    df = loader.load_data('C:/Users/USER/Desktop/Qufzah/task 4/ETL/Data/Walmart.csv')
+    df = loader.load_data('../../Data/Walmart.csv')
     
 
     transformer = Transformer()
