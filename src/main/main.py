@@ -12,6 +12,25 @@ from utils.logging_utils import app_logger
 from data_pipeline.Transformers.transformer import Transformer
 from data_pipeline.loader.exporter import ExportToPostgress
 from data_pipeline.query_runner.query_runner import QueryRunner
+import yaml
+
+def get_database_config():
+    """Prompt the user for database configuration details."""
+    config = {
+        "host": input("Enter database host: ").strip(),
+        "port": input("Enter database port: ").strip(),
+        "user": input("Enter database user: ").strip(),
+        "password": input("Enter database password: ").strip(),
+        "database": input("Enter database name: ").strip(),
+    }
+    return config
+
+def write_config_to_file(config, file_path="../config.yaml"):
+    """Write the configuration dictionary to a YAML file."""
+    with open(file_path, 'w') as file:
+        yaml.dump({"database": config}, file, default_flow_style=False)
+    print(f"Configuration saved to {file_path}.")
+
 def execute():
     """
     GET method to render the HTML form.
@@ -50,8 +69,15 @@ def execute():
         """
 
     query_runner.run_query(query, fetch_results=False)
+    app_logger.info('finish successfully')
+
+def main():
+    """Main function to gather and save database configuration."""
+    print("Please provide the following database configuration details:")
+    db_config = get_database_config()
+    write_config_to_file(db_config)
+    execute()
 
 
-
-    return "string"
-execute()
+if __name__ == "__main__":
+    main()

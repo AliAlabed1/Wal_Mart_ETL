@@ -1,0 +1,7 @@
+2024-11-27 16:44:33,326 - app_logger - INFO - df loaded successfully from ../../Data/Walmart.csv
+2024-11-27 16:44:33,377 - app_logger - INFO - DF is transformed successfully.
+2024-11-27 16:44:33,451 - app_logger - INFO - Load config.yml successfuly
+2024-11-27 16:44:38,473 - app_logger - INFO - Data loaded successfully!
+2024-11-27 16:44:38,477 - app_logger - INFO - config.yaml loaded successfully for query runner
+2024-11-27 16:44:39,116 - app_logger - INFO - Query executed successfully!
+2024-11-27 16:44:39,117 - app_logger - INFO - finish successfully
