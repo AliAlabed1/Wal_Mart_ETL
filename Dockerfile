@@ -15,4 +15,4 @@ CMD ["sh", "-c", "git clone https://github.com/AliAlabed1/Wal_Mart_ETL.git && \
     cd Wal_Mart_ETL && \
     pip install --no-cache-dir psycopg2-binary -r requierments.txt && \
     cd src/main && \
-    py main.py"]
+    python main.py"]
