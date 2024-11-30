@@ -29,6 +29,8 @@ The result of the query in this application used to build dashboard using looker
 
 
 # Get Started:
+
+* Option 1 : Run the app locally:
 To execute this application in your machien:
 1. Inastall postgresql.
 2. Create a databse.
@@ -36,6 +38,14 @@ To execute this application in your machien:
 4. run `pip install requierments.txt`.
 5. navigate to `src/main`.
 6. run `py main.py`.
+
+* Optuion 2 : Run Docker Image:
+1. Inastall postgresql.
+2. Create a databse.
+3. make sure you have docker in your machine.
+4. run the command:  
+    `docker run --rm -e DB_HOST=host.docker.internal -e DB_PORT={your-postgrsql-port} -e DB_USER={ure-postgresql-username} -e DB_PASSWORD={you-database-password} -e DB_NAME={your-database-name} alialabed161/walmart-etl:latest`
+
 
 Note: Make sure you have `python` installed.
 
