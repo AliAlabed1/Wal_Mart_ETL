@@ -15,15 +15,14 @@ from data_pipeline.query_runner.query_runner import QueryRunner
 import yaml
 
 def get_database_config():
-    """Prompt the user for database configuration details."""
-    config = {
-        "host": input("Enter database host: ").strip(),
-        "port": input("Enter database port: ").strip(),
-        "user": input("Enter database user: ").strip(),
-        "password": input("Enter database password: ").strip(),
-        "database": input("Enter database name: ").strip(),
+    """Get the database configuration from environment variables."""
+    return {
+        "host": os.getenv("DB_HOST", "host.docker.internal"),  # Use host.docker.internal for macOS/Windows
+        "port": os.getenv("DB_PORT", "5050"),
+        "user": os.getenv("DB_USER", "ALI"),
+        "password": os.getenv("DB_PASSWORD", "12345"),
+        "database": os.getenv("DB_NAME", "ETL_data_base"),
     }
-    return config
 
 def write_config_to_file(config, file_path="../config.yaml"):
     """Write the configuration dictionary to a YAML file."""
