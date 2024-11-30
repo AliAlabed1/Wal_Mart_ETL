@@ -1,3 +1,2 @@
 pandas
-psycopg2
 yaml
