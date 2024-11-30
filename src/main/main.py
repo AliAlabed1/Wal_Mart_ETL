@@ -72,7 +72,6 @@ def execute():
 
 def main():
     """Main function to gather and save database configuration."""
-    print("Please provide the following database configuration details:")
     db_config = get_database_config()
     write_config_to_file(db_config)
     execute()
